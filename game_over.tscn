@@ -1,0 +1,39 @@
+[gd_scene format=3 uid="uid://obq11qomvhjt"]
+
+[ext_resource type="Script" uid="uid://c2aqx0knk7b42" path="res://game_over.gd" id="1_yxx3c"]
+[ext_resource type="FontFile" uid="uid://dfm4m3kmwytsj" path="res://mallo-bold/MalloBold-Regular.ttf" id="2_ccer4"]
+
+[node name="Game_over" type="Control" unique_id=554053689]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_yxx3c")
+
+[node name="Button_Restart" type="Button" parent="." unique_id=1753477849]
+custom_minimum_size = Vector2(172, 54)
+layout_mode = 0
+offset_left = 114.0
+offset_top = 199.0
+offset_right = 308.0
+offset_bottom = 263.0
+theme_override_fonts/font = ExtResource("2_ccer4")
+theme_override_font_sizes/font_size = 20
+text = "RESTART"
+
+[node name="Button_Quit" type="Button" parent="." unique_id=320858545]
+custom_minimum_size = Vector2(172, 54)
+layout_mode = 0
+offset_left = 117.0
+offset_top = 290.0
+offset_right = 311.0
+offset_bottom = 349.0
+theme_override_fonts/font = ExtResource("2_ccer4")
+theme_override_font_sizes/font_size = 20
+text = "QUIT 
+"
+
+[connection signal="pressed" from="Button_Restart" to="." method="_on_button_restart_pressed"]
+[connection signal="pressed" from="Button_Quit" to="." method="_on_button_quit_pressed"]

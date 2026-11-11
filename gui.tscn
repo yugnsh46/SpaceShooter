@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://ctn56vffs6fkb"]
+
+[ext_resource type="PackedScene" uid="uid://sb13jhevroer" path="res://pause_menu.tscn" id="1_80edf"]
+[ext_resource type="PackedScene" uid="uid://obq11qomvhjt" path="res://game_over.tscn" id="2_6lon5"]
+
+[node name="GUI" type="CanvasLayer" unique_id=982318847]
+
+[node name="PauseMenu" parent="." unique_id=1848400424 instance=ExtResource("1_80edf")]
+
+[node name="Game_over" parent="." unique_id=554053689 instance=ExtResource("2_6lon5")]
+visible = false

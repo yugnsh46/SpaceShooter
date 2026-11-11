@@ -1,0 +1,62 @@
+[gd_scene format=3 uid="uid://c8crr5c74ip6a"]
+
+[ext_resource type="FontFile" uid="uid://dfm4m3kmwytsj" path="res://mallo-bold/MalloBold-Regular.ttf" id="1_06t4h"]
+[ext_resource type="Script" uid="uid://cfonifoldg7bm" path="res://main_menu.gd" id="1_7vrkn"]
+[ext_resource type="Texture2D" uid="uid://y82c536rj326" path="res://assets/background-black.png" id="2_fu7sn"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_fu7sn"]
+bg_color = Color(0.6, 0.15294118, 0.84313726, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_nwcfo"]
+bg_color = Color(0.6, 1, 0.6, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jix8l"]
+bg_color = Color(0.13333334, 0.64705884, 0.6, 1)
+
+[node name="MainMenu" type="Control" unique_id=1739141588]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_7vrkn")
+
+[node name="Background" type="TextureRect" parent="." unique_id=248756939]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_fu7sn")
+
+[node name="Button_Quit" type="Button" parent="." unique_id=2095418549]
+custom_minimum_size = Vector2(172, 54)
+layout_mode = 0
+offset_left = 120.0
+offset_top = 270.0
+offset_right = 292.0
+offset_bottom = 324.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0.9490196, 0, 1)
+theme_override_fonts/font = ExtResource("1_06t4h")
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxFlat_fu7sn")
+theme_override_styles/hover = SubResource("StyleBoxFlat_nwcfo")
+text = "QUIT"
+
+[node name="Button_Start" type="Button" parent="." unique_id=969647093]
+layout_mode = 0
+offset_left = 120.0
+offset_top = 204.0
+offset_right = 292.0
+offset_bottom = 258.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("1_06t4h")
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxFlat_jix8l")
+text = "START"
+
+[connection signal="pressed" from="Button_Quit" to="." method="_on_button_quit_pressed"]
+[connection signal="pressed" from="Button_Start" to="." method="_on_button_start_pressed"]
